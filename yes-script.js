@@ -41,3 +41,14 @@ function launchConfetti() {
     }, 300)
 }
  
+const gifs = [
+    "https://media.tenor.com/ReKE7CQyrhUAAAAj/hello-kitty.gif",
+    "https://media1.tenor.com/m/Laac2fYpKBMAAAAC/huna04.gif"
+];
+
+let index = 0;
+
+setInterval(() => {
+    index = (index + 1) % gifs.length;
+    document.getElementById("cat-gif").src = gifs[index];
+}, 2000); // cambia cada 2 segundos
